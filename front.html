@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用 Axios 发送请求</title>
+    <!-- 从 CDN 引入 Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>测试 Axios 请求</h1>
+    <script>
+      // 使用 Axios 发送 GET 请求
+      axios
+        .get("https://vercelnode-six.vercel.app/api/json")
+        .then(function (response) {
+          // 处理成功情况
+          console.log("数据: ", response.data)
+        })
+        .catch(function (error) {
+          // 处理错误情况
+          console.log("错误: ", error)
+        })
+    </script>
+  </body>
+</html>
